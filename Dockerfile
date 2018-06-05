@@ -12,3 +12,4 @@ RUN CGO_ENABLED=0 go build -o cyhoeddwr github.com/sky0621/Cyhoeddwr
 FROM scratch
 COPY --from=builder /go/src/github.com/sky0621/Cyhoeddwr/ .
 ENTRYPOINT [ "./cyhoeddwr" ]
+EXPOSE 14080
